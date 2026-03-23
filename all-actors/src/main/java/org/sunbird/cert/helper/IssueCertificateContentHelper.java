@@ -389,7 +389,7 @@ public class IssueCertificateContentHelper {
                 List<Object> orgData = (List<Object>) response.getOrDefault("organisation", Collections.emptyList());
                 String contentType = sanitizeString((String) response.getOrDefault("contentType", ""));
                 Map<String, Object> languageMapV1 = (Map<String, Object>) response.getOrDefault("languageMapV1", new HashMap<>());
-                List<Map<String, Object>> badgeMapV1 = (List<Map<String, Object>>) response.getOrDefault("badgeDetails_v1", new HashMap<>());
+                List<Map<String, Object>> badgeMapV1 = (List<Map<String, Object>>) response.getOrDefault("badgeDetails_v1", Collections.emptyList());
                 String providerName = extractProviderName(orgData);
 
                 Map<String, Object> courseInfoMap = new HashMap<>();
@@ -424,7 +424,7 @@ public class IssueCertificateContentHelper {
             String contentType = sanitizeString((String) courseMetadata.getOrDefault("contentType", ""));
             Map<String, Object> languageMapV1 = (Map<String, Object>) courseMetadata.getOrDefault("languageMapV1", new HashMap<>());
             String category = sanitizeString((String) courseMetadata.getOrDefault("category", ""));
-            List<Map<String, Object>> badgeMapV1 = (List<Map<String, Object>>) courseMetadata.getOrDefault("badgeDetails_v1", new HashMap<>());
+            List<Map<String, Object>> badgeMapV1 = (List<Map<String, Object>>) courseMetadata.getOrDefault("badgeDetails_v1", Collections.emptyList());
             String providerName = extractProviderName(orgData);
 
             Map<String, Object> courseInfoMap = new HashMap<>();
